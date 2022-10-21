@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.Vue中的数据代理</title>
+  <script src="../js/vue.js" ></script>
+</head>
+<body>
+
+<!-- 追备好一个容器 -->
+<div id="root">
+  <h1>学校名称:{{name}}</h1>
+  <h1>学校地址:{{address}}</h1>
+</div>
+<script type="text/javascript">
+
+  //创建VUE实例
+  const vm = new Vue({
+    el:'#root' ,//el用于指定当前Vue实例为哪个容器服务
+    data:{//data中用于储存数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象
+      name:'尚硅谷',
+      address:'北京'
+    }
+  })
+
+</script>
+</body>
+</html>
