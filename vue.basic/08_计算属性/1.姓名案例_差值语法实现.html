@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>姓名案例_差值语法实现</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="root">
+    性：<input type="text" v-model="firstName"> <br/>
+    名：<input type="text" v-model="lastName"> <br/>
+    全名:<span>{{firstName.slice(0,3).toUpperCase()}}-{{lastName}}</span>
+</div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    new Vue({
+        el: '#root',
+        data: {
+            firstName: '张',
+            lastName: '三',
+        }
+    })
+</script>
+</html>
